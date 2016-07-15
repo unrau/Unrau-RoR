@@ -1,0 +1,19 @@
+
+<%#
+---------------------
+SINGLE BLOG POST PAGE
+---------------------
+%>
+
+<div id="content-blog-single">
+
+  <div id="post-controls-wrapper">
+    <div id="post-controls">
+      <%= link_to 'Back', articles_path %>
+    </div>
+  </div>
+
+  <p><%= @article.title %></p>
+  <p><%= @article.text %></p>
+
+</div>

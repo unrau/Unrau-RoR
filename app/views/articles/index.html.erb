@@ -1,0 +1,35 @@
+
+<%#
+-------------------
+ALL BLOG POSTS PAGE
+-------------------
+%>
+
+<div id="content-blog-all">
+
+  <p>Blog Page</p>
+
+  <div id="blog-controls-wrapper">
+    <div id="blog-controls">
+      <%= link_to 'New Post', new_article_path %>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Text</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |a| %>
+        <tr>
+          <td><%= link_to a.title, article_path(a) %></td>
+          <td><%= a.text %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
