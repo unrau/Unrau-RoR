@@ -7,15 +7,15 @@ ALL BLOG POSTS PAGE
 
 <div id="content-blog-all">
 
-  <p>Blog Page</p>
+  <h4>Blog Page</h4>
 
   <div id="blog-controls-wrapper">
     <div id="blog-controls">
-      <%= link_to 'New Post', new_article_path %>
+      <%= link_to '+ New Post', new_article_path, :class => 'button' %>
     </div>
   </div>
 
-  <table>
+  <table class="u-full-width">
     <thead>
       <tr>
         <th>Title</th>

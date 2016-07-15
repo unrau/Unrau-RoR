@@ -7,13 +7,13 @@ SINGLE BLOG POST PAGE
 
 <div id="content-blog-single">
 
+  <h4><%= @article.title %></h4>
+  <p><%= @article.text %></p>
+
   <div id="post-controls-wrapper">
     <div id="post-controls">
-      <%= link_to 'Back', articles_path %>
+      <%= link_to 'Back', articles_path, :class => 'button' %>
     </div>
   </div>
-
-  <p><%= @article.title %></p>
-  <p><%= @article.text %></p>
 
 </div>
