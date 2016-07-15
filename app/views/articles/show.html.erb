@@ -7,12 +7,13 @@ SINGLE BLOG POST PAGE
 
 <div id="content-blog-single">
 
-  <h4><%= @article.title %></h4>
+  <h4 class="post-title"><%= @article.title %></h4>
+  <p class="date"><%= @article.created_at.strftime("%d %b %Y") %></p>
   <p><%= @article.text %></p>
 
   <div id="post-controls-wrapper">
     <div id="post-controls">
-      <%= link_to 'Back', articles_path, :class => 'button' %>
+      <%= link_to 'Back', :back, :class => 'button' %>
     </div>
   </div>
 

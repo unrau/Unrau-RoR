@@ -7,8 +7,6 @@ NEW BLOG POST PAGE
 
 <div id="content-blog-new">
 
-  <h4>New blog post</h4>
-
   <%= form_for :article, url: articles_path do |f| %>
     <div class="row">
       <div class="twelve columns">
@@ -25,7 +23,7 @@ NEW BLOG POST PAGE
     <p>&nbsp;</p>
     <div class="row">
       <div class="twelve columns">
-        <%= f.submit %> <%= link_to 'Cancel', articles_path, :class => 'button' %>
+        <%= f.submit 'Publish' %> <%= link_to 'Cancel', articles_path, :class => 'button' %>
       </div>
     </div>
   <% end %>

@@ -7,8 +7,6 @@ ALL BLOG POSTS PAGE
 
 <div id="content-blog-all">
 
-  <h4>Blog Page</h4>
-
   <div id="blog-controls-wrapper">
     <div id="blog-controls">
       <%= link_to '+ New Post', new_article_path, :class => 'button' %>
@@ -19,14 +17,14 @@ ALL BLOG POSTS PAGE
     <thead>
       <tr>
         <th>Title</th>
-        <th>Text</th>
+        <th>Date</th>
       </tr>
     </thead>
     <tbody>
       <% @articles.each do |a| %>
         <tr>
           <td><%= link_to a.title, article_path(a) %></td>
-          <td><%= a.text %></td>
+          <td><%= a.created_at.strftime("%d %b %Y") %></td>
         </tr>
       <% end %>
     </tbody>

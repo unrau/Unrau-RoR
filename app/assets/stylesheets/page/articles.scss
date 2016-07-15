@@ -4,3 +4,14 @@
 STYLES FOR BLOG PAGES
 ---------------------
 */
+
+
+#content-blog-single {
+  .post-title {
+    margin-bottom: 0;
+  }
+  .date {
+    font-size: 1rem;
+    color: $col-faded-black;
+  }
+}

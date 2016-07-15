@@ -13,6 +13,7 @@ controller generator to the page/ folder
 
 
 // SKELETON FRAMEWORK
+// http://getskeleton.com
 
 @import 'skeleton/normalize.css';
 @import 'skeleton/skeleton.css';
@@ -27,4 +28,5 @@ controller generator to the page/ folder
 // STYLES
 
 @import 'base';
+@import 'headfoot';
 @import 'page/*';
