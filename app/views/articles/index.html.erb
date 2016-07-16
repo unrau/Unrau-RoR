@@ -5,7 +5,7 @@ ALL BLOG POSTS PAGE
 -------------------
 %>
 
-<div id="content-blog-all">
+<div id="content-blog" class="blog-all">
 
   <div id="blog-controls-wrapper">
     <div id="blog-controls">
@@ -18,6 +18,7 @@ ALL BLOG POSTS PAGE
       <tr>
         <th>Title</th>
         <th>Date</th>
+        <th>Admin</th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +26,7 @@ ALL BLOG POSTS PAGE
         <tr>
           <td><%= link_to a.title, article_path(a) %></td>
           <td><%= a.created_at.strftime("%d %b %Y") %></td>
+          <td><%= link_to 'Edit', edit_article_path(a) %> <%= link_to 'Delete', article_path(a), method: :delete, data: { confirm: 'Are you sure you want to delete this post? This cannot be un-done.'} %></td>
         </tr>
       <% end %>
     </tbody>

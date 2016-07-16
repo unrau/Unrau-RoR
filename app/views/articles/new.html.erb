@@ -5,37 +5,8 @@ NEW BLOG POST PAGE
 ------------------
 %>
 
-<div id="content-blog-new">
+<div id="content-blog" class="blog-new">
 
-  <%= form_for :article, url: articles_path do |f| %>
-    <% if @article.errors.any? %>
-      <div class="form-errors">
-        <h5>You forgot <%= pluralize(@article.errors.count, 'thing') %>:</h5>
-        <ul>
-          <% @article.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-    <div class="row">
-      <div class="twelve columns">
-        <%= f.label :title %><br />
-        <%= f.text_field :title, :class => 'u-full-width' %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="twelve columns">
-        <%= f.label :text %><br />
-        <%= f.text_area :text, :class => 'u-full-width' %>
-      </div>
-    </div>
-    <p>&nbsp;</p>
-    <div class="row">
-      <div class="twelve columns">
-        <%= f.submit 'Publish' %> <%= link_to 'Cancel', articles_path, :class => 'button' %>
-      </div>
-    </div>
-  <% end %>
+  <%= render 'form' %>
 
 </div>

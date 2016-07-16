@@ -5,7 +5,7 @@ SINGLE BLOG POST PAGE
 ---------------------
 %>
 
-<div id="content-blog-single">
+<div id="content-blog" class="blog-single">
 
   <h4 class="post-title"><%= @article.title %></h4>
   <p class="date"><%= @article.created_at.strftime("%d %b %Y") %></p>
@@ -13,7 +13,7 @@ SINGLE BLOG POST PAGE
 
   <div id="post-controls-wrapper">
     <div id="post-controls">
-      <%= link_to 'Back to Blog', articles_path, :class => 'button' %>
+      <%= link_to 'Back to Blog', articles_path, :class => 'button' %> <%= link_to 'Edit', edit_article_path(@article), :class => 'button' %>
     </div>
   </div>
 

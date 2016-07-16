@@ -1,0 +1,40 @@
+
+<%#
+-------------------
+FORM FOR BLOG POSTS
+-------------------
+%>
+
+<%= form_for @article do |post| %>
+
+  <% if @article.errors.any? %>
+    <div class="form-errors">
+      <h5>You forgot <%= pluralize(@article.errors.count, 'thing') %>:</h5>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="twelve columns">
+      <%= post.label :title %><br />
+      <%= post.text_field :title, :class => 'u-full-width' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      <%= post.label :text %><br />
+      <%= post.text_area :text, :class => 'u-full-width' %>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <div class="row">
+    <div class="twelve columns">
+      <%= post.submit 'Publish' %> <%= link_to 'Cancel', articles_path, :class => 'button' %>
+    </div>
+  </div>
+
+<% end %>
