@@ -10,6 +10,7 @@ NEW BLOG POST PAGE
   <%= form_for :article, url: articles_path do |f| %>
     <% if @article.errors.any? %>
       <div class="form-errors">
+        <h5>You forgot <%= pluralize(@article.errors.count, 'thing') %>:</h5>
         <ul>
           <% @article.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
