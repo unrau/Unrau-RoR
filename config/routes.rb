@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   resources :articles
 
-  root 'welcome#index'
+  root 'static_pages#home'
 
+  get '/fiasco', to: 'static_pages#fiasco'
   get '/signup', to: 'users#new'
-  
+
 end
