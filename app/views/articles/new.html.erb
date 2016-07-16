@@ -8,6 +8,15 @@ NEW BLOG POST PAGE
 <div id="content-blog-new">
 
   <%= form_for :article, url: articles_path do |f| %>
+    <% if @article.errors.any? %>
+      <div class="form-errors">
+        <ul>
+          <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class="row">
       <div class="twelve columns">
         <%= f.label :title %><br />
