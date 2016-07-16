@@ -19,13 +19,25 @@
         <div id="menu">
           <%= link_to 'Home', root_path, :class => 'button button-primary' %>
           <%= link_to 'Blog', articles_path, :class => 'button button-primary' %>
-          <hr />
         </div>
       </div>
+
+      <div id="admin-menu-wrapper">
+        <div id="admin-menu">
+          <%= link_to 'New User', signup_path, class: 'button' %>
+        </div>
+      </div>
+
+      <hr />
 
       <div id="content-wrapper">
         <div id="content">
           <%= yield %>
+        </div>
+      </div>
+
+      <div id="footer-wrapper">
+        <div id="footer">
         </div>
       </div>
 
