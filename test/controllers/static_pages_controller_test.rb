@@ -6,9 +6,4 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get fiasco" do
-    get static_pages_fiasco_url
-    assert_response :success
-  end
-
 end
