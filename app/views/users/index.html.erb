@@ -1,0 +1,37 @@
+<% title 'Users' %>
+<%#
+--------------
+ALL USERS PAGE
+--------------
+%>
+
+<div id="content-users" class="users-all">
+
+  <div id="users-controls-wrapper">
+    <div id="users-controls">
+      <%= link_to '+ New User', new_user_path, :class => 'button' %>
+    </div>
+  </div>
+
+  <table class="u-full-width">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gravatar</th>
+        <th>Email</th>
+        <th>Date Joined</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to user.name, user_path(user) %></td>
+          <td><%= gravatar_for(user, 40) %></td>
+          <td><%= user.email %></td>
+          <td><%= user.created_at.strftime("%d %b %Y") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
