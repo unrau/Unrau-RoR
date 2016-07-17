@@ -24,7 +24,12 @@
 
       <div id="admin-menu-wrapper">
         <div id="admin-menu">
-          <%= link_to 'New User', signup_path, class: 'button' %>
+          <% if logged_in? %>
+            <%= link_to 'Sign Out', logout_path, class: 'button' %>
+            <%= link_to 'New User', signup_path, class: 'button' %>
+          <% else %>
+            <%= link_to 'Sign In', login_path, class: 'button' %>
+          <% end %>
         </div>
       </div>
 

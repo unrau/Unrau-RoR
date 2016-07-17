@@ -1,0 +1,34 @@
+<% title 'Login' %>
+<%#
+----------
+LOGIN PAGE
+----------
+%>
+
+<div id="content-sessions" class="sessions-login">
+
+  <h5>Sign In</h5>
+
+  <%= form_for(:session, url: login_path) do |form| %>
+
+    <div class="row">
+      <div class="twelve columns">
+        <%= form.label :email %>
+        <%= form.email_field :email, class: 'u-full-width' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: 'u-full-width' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <%= form.submit 'Sign In', class: 'button' %>
+      </div>
+    </div>
+
+  <% end %>
+
+</div>

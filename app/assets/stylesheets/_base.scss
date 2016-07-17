@@ -23,3 +23,15 @@ body {
   padding: 20px;
   margin-top: 60px;
 }
+
+.flash-message {
+  margin-bottom: 20px;
+}
+
+.form-errors,
+.flash-danger {
+  color: $col-error-red;
+  li {
+    list-style-type: none;
+  }
+}
