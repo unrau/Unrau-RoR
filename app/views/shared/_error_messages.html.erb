@@ -1,0 +1,18 @@
+
+<%#
+------------------------
+ERROR MESSAGES FOR FORMS
+NOTE: Currently only works for Users forms
+------------------------
+%>
+
+<% if @user.errors.any? %>
+  <div class="form-errors">
+    <h5>You forgot <%= pluralize(@user.errors.count, 'thing') %>:</h5>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
