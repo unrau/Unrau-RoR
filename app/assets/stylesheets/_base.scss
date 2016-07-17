@@ -38,3 +38,22 @@ body {
     list-style-type: none;
   }
 }
+
+.pagination {
+  span, a, em.current {
+    border: 1px solid #bbbbbb;
+    padding: 5px 14px;
+    margin-right: -5px;
+    text-decoration: none;
+    line-height: 2.2em;
+  }
+  a:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
+  .previous_page {
+    border-radius: 5px 0 0 5px;
+  }
+  .next_page {
+    border-radius: 0 5px 5px 0;
+  }
+}
