@@ -24,6 +24,10 @@ LOGIN PAGE
       </div>
     </div>
     <div class="row">
+      <%= form.check_box :remember_me %>
+      <span>Remember me on this computer</span>
+    </div>
+    <div class="row">
       <div class="twelve columns">
         <%= form.submit 'Sign In', class: 'button' %>
       </div>
