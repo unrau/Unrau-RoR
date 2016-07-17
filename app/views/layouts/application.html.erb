@@ -25,6 +25,7 @@
       <div id="admin-menu-wrapper">
         <div id="admin-menu">
           <% if logged_in? %>
+            <%= link_to current_user.name, current_user, class: 'button' %>
             <%= link_to 'Sign Out', logout_path, class: 'button' %>
             <%= link_to 'New User', signup_path, class: 'button' %>
           <% else %>

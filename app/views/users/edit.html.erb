@@ -1,0 +1,19 @@
+<% title 'Editing #{@user.name}', true %>
+<%#
+--------------
+EDIT USER PAGE
+--------------
+%>
+
+<div id="content-users" class="users-new">
+
+  <h5>Editing <%= @user.name %>:</h5>
+
+  <div id="edit-gravatar">
+    <%= gravatar_for @user %><br />
+    <a href="http://gravatar.com/emails">Edit Gravatar</a>
+  </div>
+
+  <%= render 'form' %>
+
+</div>

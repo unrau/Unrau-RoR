@@ -10,4 +10,8 @@ SINGLE USER PAGE
   <%= gravatar_for @user %>
   <p><%= @user.name %></p>
 
+  <% if logged_in? %>
+    <%= link_to 'Edit Profile', edit_user_path(current_user), class: 'button' %>
+  <% end %>
+
 </div>
