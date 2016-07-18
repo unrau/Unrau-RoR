@@ -9,7 +9,8 @@
 User.create!(name:                  "ADMIN",
              email:                 "admin@example.com",
              password:              "adminadmin",
-             password_confirmation: "adminadmin")
+             password_confirmation: "adminadmin",
+             admin:                 true)
 
 if Rails.env == "development"
   99.times do |n|
