@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :logged_in_user, only: [:new, :edit, :create, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
     @articles = Article.paginate(page: params[:page])
@@ -18,6 +20,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user = current_user
     if @article.save
       redirect_to @article
     else

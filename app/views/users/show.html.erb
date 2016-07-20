@@ -19,4 +19,34 @@ SINGLE USER PAGE
     <% end %>
   <% end %>
 
+  <div id="posts">
+    <h5>Posts:</h5>
+    <% if @user.articles.any? %>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <% if admin_user? current_user %>
+              <th>Admin</th>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+          <% @user.articles.each do |post| %>
+            <tr>
+              <td><%= link_to post.title, article_path(post) %></td>
+              <td><%= post.created_at.strftime("%d %b %Y") %></td>
+              <% if admin_user? current_user %>
+                <td><%= link_to 'Edit', edit_article_path(post) %> <%= link_to 'Delete', article_path(post), method: :delete, data: { confirm: 'Are you sure you want to delete this post? This cannot be un-done.'} %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <p>No posts</p>
+    <% end %>
+  </div>
+
 </div>

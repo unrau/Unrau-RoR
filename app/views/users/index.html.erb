@@ -7,11 +7,15 @@ ALL USERS PAGE
 
 <div id="content-users" class="users-all">
 
-  <div id="users-controls-wrapper">
-    <div id="users-controls">
-      <%= link_to '+ New User', new_user_path, :class => 'button' %>
+  <h5>Users</h5>
+
+  <% if admin_user? current_user %>
+    <div id="users-controls-wrapper">
+      <div id="users-controls">
+        <%= link_to '+ New User', new_user_path, :class => 'button' %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <%= will_paginate %>
 
