@@ -15,12 +15,14 @@ SINGLE BLOG POST PAGE
   </p>
   <p><%= @article.text %></p>
 
-  <% if current_user?(@article.user) || admin_user?(current_user) %>
-    <div id="post-controls-wrapper">
-      <div id="post-controls">
-        <%= link_to 'Back to Blog', articles_path, :class => 'button' %> <%= link_to 'Edit', edit_article_path(@article), :class => 'button' %> <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure you want to delete this post? This cannot be un-done.'}, class: 'button' %>
+  <% if logged_in? %>
+    <% if current_user?(@article.user) || admin_user?(current_user) %>
+      <div id="post-controls-wrapper">
+        <div id="post-controls">
+          <%= link_to 'Back to Blog', articles_path, :class => 'button' %> <%= link_to 'Edit', edit_article_path(@article), :class => 'button' %> <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure you want to delete this post? This cannot be un-done.'}, class: 'button' %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 
 </div>
