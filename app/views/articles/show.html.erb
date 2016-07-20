@@ -13,7 +13,7 @@ SINGLE BLOG POST PAGE
     -
     by: <%= link_to @article.user.name, @article.user %>
   </p>
-  <p><%= @article.text %></p>
+  <p><%= render_markdown(@article.text) %></p>
 
   <% if logged_in? %>
     <% if current_user?(@article.user) || admin_user?(current_user) %>
