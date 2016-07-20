@@ -32,6 +32,13 @@ gem 'bcrypt', '~> 3.1.11'
 
 gem 'will_paginate', '~> 3.1.0'
 
+# Gems for text filtering
+gem 'html-pipeline', '~> 2.4.2'
+gem 'html-pipeline-youtube', '~> 0.1.3'
+gem 'github-markdown', '~> 0.6.9'
+gem 'gemoji', '~> 2.1.0'
+gem 'rinku', '~> 2.0.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
