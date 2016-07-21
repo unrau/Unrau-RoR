@@ -13,6 +13,13 @@ html {
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #1b1818;
   color: $col-offblack;
@@ -29,14 +36,14 @@ body {
   color: $col-offwhite !important;
   &:hover {
     background-color: $col-offblack !important;
-    color: $col-purple-light !important;
+    color: $col-pink-hot !important;
   }
 }
 .button-black {
   background-color: $col-offblack !important;
   color: $col-faded-black !important;
   &:hover {
-    color: $col-pink-hot !important;
+    color: $col-red !important;
   }
 }
 
@@ -59,7 +66,7 @@ blockquote {
   background-color: $col-offblack;
   color: $col-offwhite;
   border-left: 4px solid $col-pink-hot;
-  padding: 10px 20px;
+  padding: 17px 20px 7px 20px;
 }
 
 #rails-debug {
