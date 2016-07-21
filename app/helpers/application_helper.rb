@@ -1,7 +1,11 @@
 module ApplicationHelper
 
+  def site_title
+    return 'Tristen Unrau'
+  end
+
   def title(page_title, hide_base=false)
-    base_title = 'Website Title'
+    base_title = site_title
     if page_title.length > 0
       if hide_base
         base_title = page_title.to_s

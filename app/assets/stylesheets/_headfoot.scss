@@ -8,4 +8,89 @@ HEADER, MENU, & FOOTER STYLES
 
 #header {
   margin-top: 30px;
+
+  img#logo {
+    width: 400px;
+    height: auto;
+    margin-left: -70px;
+  }
+}
+
+#header, #blurb {
+  display: inline-block;
+}
+
+#blurb {
+  margin: 50px 0 10px 20px;
+  vertical-align: top;
+  color: $col-offwhite;
+
+  p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  .magic {
+    font-weight: bold;
+    color: $col-pink-hot;
+  }
+  .magic1 {
+    margin-bottom: 0;
+  }
+  .magic2 {
+    //
+  }
+}
+
+
+#menu-wrapper {
+  padding: 20px 0;
+  background-color: $col-pink-hot;
+  @include full-width;
+}
+#menu {
+  @include no-soggy-bottom-titles;
+
+  ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px 0 0;
+  }
+  a {
+    color: $col-offwhite;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Exo 2', serif;
+    font-weight: bold;
+    font-size: 2rem;
+    &:hover {
+      color: $col-offblack;
+    }
+  }
+}
+
+
+#content-wrapper {
+  background-color: $col-offwhite;
+  @include full-width;
+}
+#content {
+  padding: 40px 0 80px 0;
+
+  .home-section {
+    margin-bottom: 60px;
+  }
+
+  #web-presence {
+    ul li {
+      display: inline-block;
+      list-style-type: none;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+#footer {
+  @include no-soggy-bottom-titles;
+  margin: 20px 0;
 }

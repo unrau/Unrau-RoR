@@ -5,6 +5,7 @@ BASE STYLES
 -----------
 */
 
+
 html {
   box-sizing: border-box;
 }
@@ -13,8 +14,52 @@ html {
 }
 
 body {
-  background-color: $col-offwhite;
+  background-color: #1b1818;
   color: $col-offblack;
+  font-family: 'Source Sans Pro', serif;
+}
+
+.button-square {
+  @include square-button;
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+.button-red {
+  background-color: $col-pink-hot !important;
+  color: $col-offwhite !important;
+  &:hover {
+    background-color: $col-offblack !important;
+    color: $col-purple-light !important;
+  }
+}
+.button-black {
+  background-color: $col-offblack !important;
+  color: $col-faded-black !important;
+  &:hover {
+    color: $col-pink-hot !important;
+  }
+}
+
+a, a:link {
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+  color: $col-pink-hot;
+  &:hover {
+    color: $col-offblack;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', serif;
+  text-transform: uppercase;
+}
+
+blockquote {
+  background-color: $col-offblack;
+  color: $col-offwhite;
+  border-left: 4px solid $col-pink-hot;
+  padding: 10px 20px;
 }
 
 #rails-debug {
@@ -61,4 +106,32 @@ body {
 .form-extras {
   font-size: 1rem;
   color: $col-faded-black;
+}
+
+.clearfix {
+  /* Fancy Clearfix courtesy of Twitter Bootstrap */
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    &:after {
+      clear: both
+    }
+  }
+}
+
+// Maintain 16:9 aspect ratio for youtube iframes
+div.youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

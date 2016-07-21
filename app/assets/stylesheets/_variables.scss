@@ -8,8 +8,21 @@ VARIABLES
 
 // COLOURS
 
-$col-offwhite:      #f8f8f8;
-$col-offblack:      #0b0b0b;
+$col-offblack:      #1b1818;
+$col-offwhite:      #f9f1f3;
+$col-pink:          #fa8484;
+$col-pink-hot:      #f74848;
+$col-red:           #f62a2a;
+$col-purple-light:  #aa4fde;
 $col-faded-black:   #474747;
 $col-error-red:     #910d0d;
 $col-success-green: #1d910d;
+
+
+// MEDIA QUERIES
+
+$media-desktop-hd: 1200px;
+$media-desktop: 1000px;
+$media-tablet: 750px;
+$media-phablet: 550px;
+$media-mobile: 400px;

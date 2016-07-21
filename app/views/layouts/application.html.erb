@@ -11,30 +11,24 @@
 
       <div id="header-wrapper">
         <div id="header">
-          <h2>Website Title</h2>
+          <h2><%= image_tag "logo.png", id: 'logo' %></h2>
+        </div>
+        <div id="blurb">
+          <p class="magic magic1">I write the words that manifest realms...</p>
+          <p class="magic magic2">I send photons of my devising into your eyeballs...</p>
+          <p>That's nerd parlance for "I'm a software developer".<br />
+          I do full-stack MVC web development, empowered by a background in graphic design.</p>
         </div>
       </div>
 
       <div id="menu-wrapper">
         <div id="menu">
-          <%= link_to 'Home', root_path, :class => 'button button-primary' %>
-          <%= link_to 'Blog', articles_path, :class => 'button button-primary' %>
+          <ul>
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Blog', articles_path %></li>
+          </ul>
         </div>
       </div>
-
-      <div id="admin-menu-wrapper">
-        <div id="admin-menu">
-          <% if logged_in? %>
-            <%= link_to current_user.name, current_user, class: 'button' %>
-            <%= link_to 'Sign Out', logout_path, class: 'button' %>
-            <%= link_to 'Users', users_path, class: 'button' %>
-          <% else %>
-            <%= link_to 'Sign In', login_path, class: 'button' %>
-          <% end %>
-        </div>
-      </div>
-
-      <hr />
 
       <div id="content-wrapper">
         <div id="content">
@@ -45,14 +39,21 @@
 
       <div id="footer-wrapper">
         <div id="footer">
+
+          <div id="admin-menu-wrapper">
+            <div id="admin-menu">
+              <% if logged_in? %>
+                <%= link_to current_user.name, current_user, class: 'button-square button-black' %>
+                <%= link_to 'Sign Out', logout_path, class: 'button-square button-black' %>
+                <%= link_to 'Users', users_path, class: 'button-square button-black' %>
+              <% else %>
+                <%= link_to 'Sign In', login_path, class: 'button-square button-black' %>
+              <% end %>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <% if Rails.env.development? %>
-        <div id="rails-debug">
-          <%= debug(params) %>
-        </div>
-      <% end %>
 
     </div>
   </body>
