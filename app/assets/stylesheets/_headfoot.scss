@@ -63,7 +63,7 @@ HEADER, MENU, & FOOTER STYLES
     font-weight: bold;
     font-size: 2rem;
     &:hover {
-      color: $col-offblack;
+      color: $col-blue-dark;
     }
   }
 }
@@ -93,7 +93,7 @@ HEADER, MENU, & FOOTER STYLES
 #footer {
   @include no-soggy-bottom-titles;
   margin: 20px 0;
-  color: $col-offwhite;
+  color: $col-blue;
   #admin-menu-wrapper {
     margin-top: 17px;
   }

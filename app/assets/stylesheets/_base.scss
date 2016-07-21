@@ -35,7 +35,7 @@ body {
   background-color: $col-pink-hot !important;
   color: $col-offwhite !important;
   &:hover {
-    background-color: $col-offblack !important;
+    background-color: $col-blue-dark !important;
     color: $col-pink-hot !important;
   }
 }
@@ -53,7 +53,7 @@ a, a:link {
   transition-timing-function: ease-out;
   color: $col-pink-hot;
   &:hover {
-    color: $col-offblack;
+    color: $col-blue-dark;
   }
 }
 
@@ -67,6 +67,7 @@ blockquote {
   color: $col-offwhite;
   border-left: 4px solid $col-pink-hot;
   padding: 17px 20px 7px 20px;
+  box-shadow: inset 33px 0px 72px 3px $col-blue-dark;
 }
 
 #rails-debug {
