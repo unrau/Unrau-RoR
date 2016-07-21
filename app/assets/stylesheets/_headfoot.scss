@@ -93,4 +93,8 @@ HEADER, MENU, & FOOTER STYLES
 #footer {
   @include no-soggy-bottom-titles;
   margin: 20px 0;
+  color: $col-offwhite;
+  #admin-menu-wrapper {
+    margin-top: 17px;
+  }
 }
