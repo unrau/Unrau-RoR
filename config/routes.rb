@@ -6,10 +6,11 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
-  get '/signup',    to: 'users#new'
-  get '/login',     to: 'sessions#new'
-  post '/login',    to: 'sessions#create'
-  get '/logout',    to: 'sessions#destroy'
+  get '/signup',      to: 'users#new'
+  get '/login',       to: 'sessions#new'
+  post '/login',      to: 'sessions#create'
+  get '/logout',      to: 'sessions#destroy'
+  get '/wallpapers',  to: 'static_pages#wallpapers'
   #the above 'get' command was originally 'delete' in the tutorial
 
 end
