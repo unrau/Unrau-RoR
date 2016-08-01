@@ -6,4 +6,7 @@ class StaticPagesController < ApplicationController
   def wallpapers
   end
 
+  def fiasco
+  end
+
 end
