@@ -6,6 +6,13 @@ STYLES FOR BLOG PAGES
 */
 
 
+.content-field {
+  min-height: 300px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+
 .blog-single {
   .post-title {
     margin-bottom: 0;
