@@ -11,6 +11,23 @@ MIXINS
   margin: 0 auto;
 }
 
+@mixin full-width {
+  // Allow element to fill the full width of the
+  // viewport without breaking from the layout
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  & > * {
+    // Allow content inside full-width
+    // element to maintain its behaviour
+    @include main-wrapper;
+  }
+}
+
 @mixin square-button {
   font-family: 'Exo 2', sans-serif;
   padding: 6px 10px;
@@ -32,15 +49,6 @@ MIXINS
   background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
   background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 ); /* IE6-9 */
-}
-
-@mixin full-width {
-  // Enable background of element to extend to full-width
-  // Not suitable for monitors the size of Saturn
-  margin-left: -9999px;
-  margin-right: -9999px;
-  padding-left: 9999px;
-  padding-right: 9999px;
 }
 
 @mixin background-image($file, $width, $height, $positionX: left, $positionY: top, $background-repeat: no-repeat) {
