@@ -11,9 +11,8 @@ Rails.application.routes.draw do
   get '/login',       to: 'sessions#new'
   post '/login',      to: 'sessions#create'
   get '/logout',      to: 'sessions#destroy'
-  
+
   get '/wallpapers',  to: 'static_pages#wallpapers'
   get '/fiasco',      to: 'static_pages#fiasco'
-  #the above 'get' command was originally 'delete' in the tutorial
 
 end
