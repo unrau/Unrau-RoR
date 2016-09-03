@@ -7,87 +7,73 @@ HOME PAGE
 
 <div id="content-home">
 
-  <div class="home-section">
-    <h6>I am a part-time web developer at <a href="#">Project House</a>, and I take occasional small commissions on the side.</h6>
-    <p><a href="mailto:tristen@unrau.me" class="button-square button-red">Email Me</a></p>
-  </div>
-
-  <%# LINKS %>
-  <div class="home-section">
-    <div id="web-presence-wrapper">
-      <div id="web-presence" class="button-row">
-        <h5>Web Presence</h5>
-        <ul>
-          <li><a href="https://localsolo.com/vancouver-bc/profile/40733/" class="button-square button-red">Local Solo</a></li>
-          <li><a href="http://ca.linkedin.com/in/tristenunrau" class="button-square button-red">Linked In</a></li>
-          <li><a href="https://github.com/unrau/" class="button-square button-red">Git Hub</a></li>
-          <li><a href="https://twitter.com/starbuckbeak" class="button-square button-red">Twitter</a></li>
-        </ul>
+  <div class="home-section-wrapper" id="introduction-wrapper">
+    <div class="home-section" id="introduction">
+      <%= image_tag "tristen.png", id: 'tristen' %>
+      <div id="blurb">
+        <h6>
+          I write the words that manifest realms...<br />
+          I send photons of my devising into your eyeballs...<br />
+        </h6>
+        <p>
+          MVC Front-End Web Developer<br />
+          Fiction Writer<br />
+          Budding Indie Game Dev
+        </p>
+        <p><a href="mailto:tristen@unrau.me" class="button-square button-red"><%= icon('envelope') %> Email Me</a></p>
       </div>
     </div>
   </div>
 
-  <%# APPS %>
-  <div class="home-section">
-    <h5>My Apps</h5>
-    <table class="u-full-width">
-      <thead>
-        <tr>
-          <th>Name/Link</th>
-          <th>Description</th>
-          <th>Code</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="#" class="button-square button-red">Chocolate Milk Ipsum</a></td>
-          <td>Web app - Generate chocolate milk flavoured Lorem Ipsum.</td>
-          <td><a href="#">Click Here</a></td>
-          <td>Mar 2016</td>
-        </tr>
-        <tr>
-          <td><a href="#" class="button-square button-red">Extreme Stopwatch</a></td>
-          <td>iPhone game - Stopwatch with a twist.</td>
-          <td>n/a</td>
-          <td>May 2015</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <%# WEBSITES %>
-  <div class="home-section">
-    <h5>My Websites</h5>
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <a href="http://hownowbrowncow.ca" target="_blank" class="button-square button-red">How Now Brown Cow</a>
-          </td>
-          <td>
-            Where I review chocolate milk!
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a href="http://daxripley.com" target="_blank" class="button-square button-red">Dax Ripley</a>
-          </td>
-          <td>
-            Where I sing songs!
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <%# LINKS %>
+  <div class="home-section-wrapper" id="web-presence-wrapper">
+    <div class="home-section button-row" id="web-presence">
+      <h5>Me on the Web</h5>
+      <ul>
+        <li><a href="https://localsolo.com/vancouver-bc/profile/40733/" class="button-square button-red"><%= icon('shopping-cart') %> Local Solo</a></li>
+        <li><a href="http://ca.linkedin.com/in/tristenunrau" class="button-square button-red"><%= icon('linkedin') %> Linked In</a></li>
+        <li><a href="https://github.com/unrau/" class="button-square button-red"><%= icon('github') %> Git Hub</a></li>
+        <li><a href="https://twitter.com/starbuckbeak" class="button-square button-red"><%= icon('twitter') %> Twitter</a></li>
+      </ul>
+    </div>
   </div>
 
   <%# STUFF %>
-  <div class="home-section button-row">
-    <h5>Other Stuff</h5>
-    <ul>
-      <li><a href="/wallpapers" class="button-square button-red">Desktop Wallpapers</a></li>
-      <li><a href="/fiasco" class="button-square button-red">Fiasco Playsets</a></li>
-    </ul>
+  <div class="home-section-wrapper" id="stuff-wrapper">
+    <div class="home-section button-row" id="stuff">
+      <h5>Stuff I Made</h5>
+      <ul>
+        <li><a href="/wallpapers" class="button-square button-red"><%= icon('file') %> Desktop Wallpapers</a></li>
+        <li><a href="/fiasco" class="button-square button-red"><%= icon('file') %> Fiasco Playsets</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <%# WEBSITES %>
+  <div class="home-section-wrapper" id="websites-wrapper">
+    <div class="home-section" id="websites">
+      <h5>My Other Websites</h5>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <a href="http://hownowbrowncow.ca" target="_blank" class="button-square button-red"><%= icon('external-link') %> How Now Brown Cow</a>
+            </td>
+            <td>
+              Where I review chocolate milk!
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://daxripley.com" target="_blank" class="button-square button-red"><%= icon('external-link') %> Dax Ripley</a>
+            </td>
+            <td>
+              Where I sing songs!
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>

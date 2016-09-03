@@ -13,12 +13,6 @@
         <div id="header">
           <h2><%= image_tag "logo.png", id: 'logo' %></h2>
         </div>
-        <div id="blurb">
-          <p class="magic magic1">I write the words that manifest realms...</p>
-          <p class="magic magic2">I send photons of my devising into your eyeballs...</p>
-          <p>That's nerd parlance for: <span class="col-pink-hot"><strong>I'm a software developer</strong></span>.<br />
-          I do front-end MVC web development, empowered by a background in graphic design.</p>
-        </div>
       </div>
 
       <div id="menu-wrapper">
@@ -48,12 +42,26 @@
             <div id="admin-menu">
               <% if logged_in? %>
                 <ul>
-                  <li><%= link_to current_user.name, current_user, class: 'button-square button-black' %></li>
-                  <li><%= link_to 'Sign Out', logout_path, class: 'button-square button-black' %></li>
-                  <li><%= link_to 'Users', users_path, class: 'button-square button-black' %></li>
+                  <li>
+                    <%= link_to current_user, class: 'button-square button-black' do %>
+                      <%= icon('user') %> <%= current_user.name %>
+                    <% end %>
+                  </li>
+                  <li>
+                    <%= link_to logout_path, class: 'button-square button-black' do %>
+                      <%= icon('sign-out') %> Sign Out
+                    <% end %>
+                  </li>
+                  <li>
+                    <%= link_to users_path, class: 'button-square button-black' do %>
+                      <%= icon('group') %> Users
+                    <% end %>
+                  </li>
                 </ul>
               <% else %>
-                <%= link_to 'Sign In', login_path, class: 'button-square button-black' %>
+                <%= link_to login_path, class: 'button-square button-black'  do %>
+                  <%= icon('sign-in') %> Sign In
+                <% end %>
               <% end %>
             </div>
           </div>
