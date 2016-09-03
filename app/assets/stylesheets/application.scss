@@ -14,6 +14,12 @@ controller generator to the page/ folder
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 
+// FONT AWESOME ICONS
+// https://github.com/FortAwesome/font-awesome-sass#rails-helper-usage
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
 // SKELETON FRAMEWORK
 // http://getskeleton.com
 
