@@ -6,6 +6,11 @@ MIXINS
 */
 
 
+@mixin main-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
 @mixin square-button {
   font-family: 'Exo 2', sans-serif;
   padding: 6px 10px;

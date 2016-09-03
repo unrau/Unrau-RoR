@@ -150,3 +150,7 @@ div.youtube {
 .col-pink-hot {
   color: $col-pink-hot;
 }
+
+#main-wrapper {
+  @include main-wrapper;
+}
