@@ -7,8 +7,9 @@ SINGLE USER PAGE
 
 <div id="content-users" class="users-single">
 
-  <%= gravatar_for @user %>
-  <p><%= @user.name %></p>
+  <h5><%= @user.name %></h5>
+
+  <p><%= gravatar_for @user %></p>
 
   <% if logged_in? %>
     <% if current_user?(@user) || current_user.admin? %>
@@ -20,7 +21,7 @@ SINGLE USER PAGE
   <% end %>
 
   <div id="posts">
-    <h5>Posts:</h5>
+    <h5>Blog Posts:</h5>
     <% if @user.articles.any? %>
       <table class="u-full-width">
         <thead>
