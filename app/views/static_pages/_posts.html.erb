@@ -1,0 +1,19 @@
+<% if @articles.any? %>
+  <table class="u-full-width">
+    <tbody>
+      <% @articles.each do |a| %>
+        <tr>
+          <td>
+            <%= link_to article_path(a)  do %>
+              <%= icon('file-text') %> <%= a.title %>
+            <% end %>
+          </td>
+          <td><%= a.created_at.strftime("%d %b %Y") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= js_will_paginate @articles, :previous_label => '&#8604; Newer', :next_label => 'Older &#8605;' %>
+<% else %>
+  <p>No posts here yet.</p>
+<% end %>
