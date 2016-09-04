@@ -12,6 +12,10 @@ STYLES FOR HOME PAGE
 .home-section {
   padding: 25px 0;
 }
+.last-home-section {
+  padding: 25px 0 0 0;
+  margin-bottom: -10px;
+}
 
 
 #introduction-wrapper {
@@ -102,4 +106,9 @@ STYLES FOR HOME PAGE
       cursor: default;
     }
   }
+}
+
+div#weblog {
+  // for tweaking anchor position of blog section
+  height: 60px;
 }

@@ -17,3 +17,5 @@
 <% else %>
   <p>No posts here yet.</p>
 <% end %>
+
+<% session[:pagenumber] = @articles.current_page %>
