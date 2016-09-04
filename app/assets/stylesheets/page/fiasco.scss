@@ -1,0 +1,30 @@
+
+/*
+-------------------------------
+STYLES FOR FIASCO PLAYSETS PAGE
+-------------------------------
+*/
+
+
+img#fiasco-banner {
+  @include full-width;
+  margin: -40px 0 40px 0;
+}
+
+.fiasco-playset {
+  margin: 50px 0 0 0;
+
+  img.playset-cover {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    margin: 0 20px 15px 0;
+  }
+  .playset-info {
+    display: inline-block;
+  }
+
+  .playset-title {
+    margin-bottom: 0;
+  }
+}
