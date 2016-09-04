@@ -15,6 +15,4 @@ Rails.application.routes.draw do
   get '/wallpapers',  to: 'static_pages#wallpapers'
   get '/fiasco',      to: 'static_pages#fiasco'
 
-  get '/portfolio',   to: 'portfolio#index'
-
 end
