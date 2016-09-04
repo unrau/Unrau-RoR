@@ -9,14 +9,6 @@ ALL BLOG POSTS PAGE
 
   <h5>Blog</h5>
 
-  <% if logged_in? && admin_user?(current_user) %>
-    <div id="blog-controls-wrapper">
-      <div id="blog-controls">
-        <%= link_to '+ New Post', new_article_path, :class => 'button' %>
-      </div>
-    </div>
-  <% end %>
-
   <% if @articles.any? %>
     <%= will_paginate %>
     <table class="u-full-width">
@@ -32,7 +24,11 @@ ALL BLOG POSTS PAGE
       <tbody>
         <% @articles.each do |a| %>
           <tr>
-            <td><%= link_to a.title, article_path(a) %></td>
+            <td>
+              <%= link_to article_path(a)  do %>
+                <%= icon('file-text') %> <%= a.title %>
+              <% end %>
+            </td>
             <td><%= a.created_at.strftime("%d %b %Y") %></td>
             <% if logged_in? && admin_user?(current_user) %>
               <td><%= link_to 'Edit', edit_article_path(a) %> <%= link_to 'Delete', article_path(a), method: :delete, data: { confirm: 'Are you sure you want to delete this post? This cannot be un-done.'} %></td>

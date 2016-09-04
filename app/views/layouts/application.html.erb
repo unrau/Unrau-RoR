@@ -20,8 +20,10 @@
           <div id="menu">
             <ul>
               <li><%= link_to 'Home', root_path %></li>
-              <li><%= link_to 'Blog', articles_path %></li>
-              <li><a href="#">Portfolio</a></li>
+              <li><a href="https://twitter.com/starbuckbeak"><%= icon('twitter') %></a></li>
+              <li><a href="http://ca.linkedin.com/in/tristenunrau"><%= icon('linkedin') %></a></li>
+              <li><a href="https://github.com/unrau/"><%= icon('github') %></a></li>
+              <li><a href="https://localsolo.com/vancouver-bc/profile/40733/"><%= icon('shopping-cart') %></a></li>
             </ul>
           </div>
         </div>
@@ -49,14 +51,21 @@
                       <%= icon('user') %> <%= current_user.name %>
                     <% end %>
                   </li>
-                  <li>
-                    <%= link_to logout_path, class: 'button-square button-black' do %>
-                      <%= icon('sign-out') %> Sign Out
-                    <% end %>
-                  </li>
+                  <% if admin_user?(current_user) %>
+                    <li>
+                      <%= link_to new_article_path, class: 'button-square button-black' do %>
+                        <%= icon('plus') %> New Post
+                      <% end %>
+                    </li>
+                  <% end %>
                   <li>
                     <%= link_to users_path, class: 'button-square button-black' do %>
                       <%= icon('group') %> Users
+                    <% end %>
+                  </li>
+                  <li>
+                    <%= link_to logout_path, class: 'button-square button-black' do %>
+                      <%= icon('sign-out') %> Sign Out
                     <% end %>
                   </li>
                 </ul>

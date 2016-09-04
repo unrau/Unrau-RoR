@@ -10,7 +10,7 @@ STYLES FOR HOME PAGE
 }
 
 .home-section {
-  padding: 15px 0;
+  padding: 25px 0;
 }
 
 
@@ -18,14 +18,12 @@ STYLES FOR HOME PAGE
   margin-top: -40px;
   background-color: $col-blue-dark;
   color: $col-offwhite;
-  margin-bottom: 40px;
 }
 
 #introduction {
-  padding: 25px 0;
   text-align: center;
 
-  #tristen {
+  img#tristen {
     display: inline-block;
     border-radius: 50%;
     width: 200px;
@@ -48,5 +46,58 @@ STYLES FOR HOME PAGE
 
   a.button-red:hover {
     background-color: $col-offwhite !important;
+  }
+}
+
+
+#stuff {
+  padding: 40px 0 0 0;
+}
+
+
+#blog-home-wrapper {
+  margin-bottom: -80px;
+  background-color: $col-blue-light;
+}
+
+#blog-home {
+  padding-bottom: 60px;
+  color: $col-offwhite;
+
+  a, a:link {
+    color: $col-blue-dark;
+    font-weight: bold;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  tr:last-child {
+    td {
+      border-bottom-width: 0;
+    }
+  }
+
+  td {
+    border-color: $col-offwhite;
+
+    a {
+      padding: 10px 20px 10px 0;
+    }
+  }
+
+  div.pagination {
+    span, em, a {
+      color: $col-offwhite;
+      border-color: $col-blue;
+      background-color: $col-blue-dark;
+    }
+    a:hover {
+      color: $col-blue;
+    }
+    .disabled, .current {
+      color: $col-blue-light;
+    }
   }
 }
