@@ -10,7 +10,7 @@ ALL BLOG POSTS PAGE
   <h5>Blog</h5>
 
   <% if @articles.any? %>
-    <%= will_paginate %>
+    <%= will_paginate @articles, :previous_label => '&#8604; Newer', :next_label => 'Older &#8605;' %>
     <table class="u-full-width">
       <thead>
         <tr>
@@ -37,7 +37,7 @@ ALL BLOG POSTS PAGE
         <% end %>
       </tbody>
     </table>
-    <%= will_paginate %>
+    <%= will_paginate @articles, :previous_label => '&#8604; Newer', :next_label => 'Older &#8605;' %>
   <% else %>
     <p>No posts here yet.</p>
   <% end %>

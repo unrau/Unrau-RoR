@@ -28,7 +28,7 @@ HOME PAGE
   <%# STUFF %>
   <div class="home-section-wrapper" id="stuff-wrapper">
     <div class="home-section button-row" id="stuff">
-      <h5>My Stuff</h5>
+      <h5>Stuff I Made</h5>
       <ul>
         <li><a href="/wallpapers" class="button-square button-red"><%= icon('desktop') %> Desktop Wallpapers</a></li>
         <li><a href="/fiasco" class="button-square button-red"><%= icon('newspaper-o') %> Fiasco Playsets</a></li>
@@ -39,7 +39,7 @@ HOME PAGE
   <%# WEBSITES %>
   <div class="home-section-wrapper" id="websites-wrapper">
     <div class="home-section" id="websites">
-      <h5>My Websites</h5>
+      <h5>My Other Websites</h5>
       <table>
         <tbody>
           <tr>
@@ -63,10 +63,10 @@ HOME PAGE
     </div>
   </div>
 
-  <%# WEBSITES %>
+  <%# BLOG %>
   <div class="home-section-wrapper" id="blog-home-wrapper">
     <div class="home-section" id="blog-home">
-      <h5>My Blog</h5>
+      <h5>Web Log</h5>
 
       <% if @articles.any? %>
         <table class="u-full-width">
@@ -79,14 +79,11 @@ HOME PAGE
                   <% end %>
                 </td>
                 <td><%= a.created_at.strftime("%d %b %Y") %></td>
-                <% if logged_in? && admin_user?(current_user) %>
-                  <td><%= link_to 'Edit', edit_article_path(a) %> <%= link_to 'Delete', article_path(a), method: :delete, data: { confirm: 'Are you sure you want to delete this post? This cannot be un-done.'} %></td>
-                <% end %>
               </tr>
             <% end %>
           </tbody>
         </table>
-        <%= will_paginate @articles %>
+        <%= will_paginate @articles, :previous_label => '&#8604; Newer', :next_label => 'Older &#8605;' %>
       <% else %>
         <p>No posts here yet.</p>
       <% end %>

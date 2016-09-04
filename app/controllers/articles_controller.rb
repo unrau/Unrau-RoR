@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :logged_in_user, only: [:new, :edit, :create, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :new, :edit, :create, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index

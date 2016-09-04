@@ -90,14 +90,16 @@ STYLES FOR HOME PAGE
   div.pagination {
     span, em, a {
       color: $col-offwhite;
-      border-color: $col-blue;
+      border-color: $col-blue-light;
       background-color: $col-blue-dark;
     }
     a:hover {
-      color: $col-blue;
+      color: $col-blue-light;
     }
     .disabled, .current {
       color: $col-blue-light;
+      background-color: $col-blue;
+      cursor: default;
     }
   }
 }
