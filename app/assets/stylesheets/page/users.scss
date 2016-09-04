@@ -13,5 +13,10 @@ STYLES FOR USER PAGES
 .users-single {
   #posts {
     margin-top: 40px;
+
+    a, a:link {
+      font-weight: bold;
+      padding: 10px 20px 10px 0;
+    }
   }
 }

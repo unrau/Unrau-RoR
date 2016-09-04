@@ -37,7 +37,11 @@ SINGLE USER PAGE
         <tbody>
           <% @user.articles.each do |post| %>
             <tr>
-              <td><%= link_to post.title, article_path(post) %></td>
+              <td>
+                <%= link_to article_path(post) do %>
+                  <%= icon('file-text') %> <%= post.title %>
+                <% end %>
+              </td>
               <td><%= post.created_at.strftime("%d %b %Y") %></td>
               <% if logged_in? %>
                 <% if current_user?(@user) || admin_user?(current_user) %>
