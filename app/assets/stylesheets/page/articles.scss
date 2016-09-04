@@ -7,15 +7,16 @@ STYLES FOR BLOG PAGES
 
 
 #content-blog {
-  a, a:link {
-    font-weight: bold;
-    padding: 10px 20px 10px 0;
-  }
-
   tr:last-child {
     td {
       border-bottom-width: 0;
     }
+  }
+}
+.blog-all {
+  a, a:link {
+    font-weight: bold;
+    padding: 10px 20px 10px 0;
   }
 }
 
