@@ -48,6 +48,7 @@ body {
 }
 
 a, a:link {
+  text-decoration: none;
   transition-property: all;
   transition-duration: 0.1s;
   transition-timing-function: ease-out;
@@ -68,6 +69,10 @@ blockquote {
   border-left: 4px solid $col-pink-hot;
   padding: 17px 20px 7px 20px;
   box-shadow: inset 33px 0px 72px 3px $col-blue-dark;
+}
+
+img {
+  vertical-align: top;
 }
 
 #rails-debug {
