@@ -18,6 +18,12 @@ HEADER, MENU, & FOOTER STYLES
 }
 
 
+#menu-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
 #menu-wrapper {
   padding: 20px 0;
   background-color: $col-pink-hot;
