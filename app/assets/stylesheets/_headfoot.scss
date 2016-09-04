@@ -7,14 +7,10 @@ HEADER, MENU, & FOOTER STYLES
 
 
 #header {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
-
-  img#logo {
-    width: 400px;
-    max-width: 100%;
-    height: auto;
-  }
+  color: $col-offwhite;
+  text-shadow: 2px 2px 5px #f62a2a;
 }
 
 
