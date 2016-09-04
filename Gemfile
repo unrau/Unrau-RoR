@@ -39,8 +39,11 @@ gem 'github-markdown', '~> 0.6.9'
 gem 'gemoji', '~> 2.1.0'
 gem 'rinku', '~> 2.0.0'
 
-#Use font-awesome-sass for Font Awesome icons
+# Use font-awesome-sass for Font Awesome icons
 gem 'font-awesome-sass', '~> 4.6.2'
+
+# Use FriendlyID for riendly URLs
+gem 'friendly_id'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
