@@ -26,6 +26,18 @@ body {
   font-family: 'Source Sans Pro', serif;
 }
 
+a.button,
+input.button {
+  @include square-button;
+  background-color: $col-offwhite;
+  color: $col-faded-black !important;
+  padding: 6px 10px 6px 10px !important;
+
+  &:hover {
+    color: $col-offblack !important;
+  }
+}
+
 .button-square {
   @include square-button;
   font-size: 1.3rem;
