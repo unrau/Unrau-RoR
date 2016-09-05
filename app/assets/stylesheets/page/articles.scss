@@ -37,3 +37,42 @@ STYLES FOR BLOG PAGES
     color: $col-faded-black;
   }
 }
+
+
+#post-author-wrapper {
+  margin: 30px 0 -80px 0;
+  @include full-width;
+  background-color: $col-blue-dark;
+}
+
+#post-author {
+  padding: 25px 0 20px 0;
+  color: $col-blue-light;
+  text-align: center;
+}
+
+#author-picture,
+#post-author-blurb {
+  display: inline-block;
+}
+
+#post-author-blurb {
+  max-width: 60%;
+  text-align: left;
+
+  a, a:link {
+    font-weight: bold;
+    color: $col-blue-light;
+  }
+  a:hover {
+    color: $col-pink-hot;
+  }
+}
+
+#author-picture {
+  width: 150px;
+  border-radius: 50%;
+  margin: 0 40px 20px 0;
+  vertical-align: top;
+  border: 3px solid $col-blue-light;
+}
