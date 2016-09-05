@@ -182,3 +182,24 @@ div.youtube {
 i.fa {
   margin-right: 6px;
 }
+
+canvas#confetti_canvas {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  -moz-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  -webkit-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  /* match this time length with the length inside deactivate() */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+canvas#confetti_canvas.visible {
+  visibility: visible;
+  opacity: 1;
+}
+#confetti_button{
+  cursor: pointer;
+}
