@@ -15,7 +15,7 @@ SINGLE BLOG POST PAGE
   </p>
   <p><%= render_markdown(@article.text) %></p>
 
-  <a href="/?page=<%= session[:pagenumber] || 1 %>;/#weblog" class="button">Back</a>
+  <a href="/?page=<%= session[:pagenumber] || 1 %>;/#weblog" class="button">Go Back</a>
 
   <% if logged_in? %>
     <% if current_user?(@article.user) || admin_user?(current_user) %>
