@@ -36,8 +36,19 @@ MIXINS
   transform: perspective(1px) translateY(-50%);
 }
 
-@mixin hairline-border-bottom($colour) {
-  border-bottom: 1px solid $colour;
+@mixin hairline-border($position, $colour) {
+  @if $position == 'top' {
+    border-top: 1px solid $colour;
+  }
+  @else if $position == 'right' {
+    border-right: 1px solid $colour;
+  }
+  @else if $position == 'bottom' {
+    border-bottom: 1px solid $colour;
+  }
+  @else if $position == 'left' {
+    border-left: 1px solid $colour;
+  }
   @media (-webkit-min-device-pixel-ratio: 2) {
     border-width: 0.5px;
   }

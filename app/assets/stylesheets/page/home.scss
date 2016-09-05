@@ -22,6 +22,7 @@ STYLES FOR HOME PAGE
   margin-top: -40px;
   background-color: $col-blue-dark;
   color: $col-offwhite;
+  @include hairline-border('bottom', rgba(black, 0.5));
 }
 
 #introduction {
@@ -70,7 +71,8 @@ STYLES FOR HOME PAGE
 #blog-home-wrapper {
   margin-bottom: -80px;
   background-color: $col-blue-light;
-  @include hairline-border-bottom($col-red);
+  @include hairline-border('bottom', rgba($col-offwhite, 0.3));
+  @include hairline-border('top', rgba($col-offblack, 0.3));
 }
 
 #blog-home {

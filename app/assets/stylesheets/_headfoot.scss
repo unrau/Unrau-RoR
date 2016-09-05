@@ -24,6 +24,7 @@ HEADER, MENU, & FOOTER STYLES
   padding: 20px 0;
   background-color: $col-pink-hot;
   @include full-width;
+  @include hairline-border('bottom', rgba($col-offwhite, 0.2));
 }
 #menu {
   @include no-soggy-bottom-titles;
