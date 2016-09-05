@@ -73,10 +73,10 @@ HEADER, MENU, & FOOTER STYLES
 }
 #footer {
   @include no-soggy-bottom-titles;
-  padding: 20px 0;
+  padding: 30px 0;
   color: $col-blue;
   #admin-menu-wrapper {
-    margin-top: 17px;
+    margin-top: 30px;
   }
   #admin-menu {
     ul li {
