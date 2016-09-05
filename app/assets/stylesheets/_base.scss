@@ -28,19 +28,22 @@ body {
 
 a.button,
 input.button {
-  @include square-button;
-  background-color: $col-offwhite;
-  color: $col-faded-black !important;
-  padding: 6px 10px 6px 10px !important;
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: $col-pink-hot !important;
+  background-color: $col-blue-dark !important;
+  border-color: $col-pink-hot !important;
 
   &:hover {
-    color: $col-offblack !important;
+    color: $col-offwhite !important;
+    background-color: $col-blue-light !important;
+    border-color: $col-blue-dark;
   }
 }
 
 .button-square {
   @include square-button;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: normal;
 }
 .button-red {

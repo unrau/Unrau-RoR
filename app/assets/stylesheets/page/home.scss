@@ -26,6 +26,7 @@ STYLES FOR HOME PAGE
 
 #introduction {
   text-align: center;
+  padding: 33px 0 28px 0;
 
   img#tristen {
     display: inline-block;
@@ -45,6 +46,13 @@ STYLES FOR HOME PAGE
 
     span.doer {
       color: $col-blue-light;
+    }
+
+    a, a:link {
+      color: $col-blue-light;
+    }
+    a:hover {
+      color: $col-pink-hot;
     }
   }
 
@@ -67,14 +75,13 @@ STYLES FOR HOME PAGE
 #blog-home {
   padding-bottom: 60px;
   color: $col-offwhite;
+  font-size: 1.8rem;
 
   a, a:link {
     color: $col-blue-dark;
-    font-weight: bold;
-
-    &:hover {
-      color: inherit;
-    }
+  }
+  a:hover {
+    color: $col-offwhite;
   }
 
   tr:last-child {
