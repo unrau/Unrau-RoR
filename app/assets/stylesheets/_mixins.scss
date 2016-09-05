@@ -36,6 +36,13 @@ MIXINS
   transform: perspective(1px) translateY(-50%);
 }
 
+@mixin hairline-border-bottom($colour) {
+  border-bottom: 1px solid $colour;
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    border-width: 0.5px;
+  }
+}
+
 @mixin square-button {
   font-family: 'Exo 2', sans-serif;
   padding: 10px 20px;

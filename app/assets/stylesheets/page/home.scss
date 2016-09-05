@@ -70,6 +70,7 @@ STYLES FOR HOME PAGE
 #blog-home-wrapper {
   margin-bottom: -80px;
   background-color: $col-blue-light;
+  @include hairline-border-bottom($col-red);
 }
 
 #blog-home {
