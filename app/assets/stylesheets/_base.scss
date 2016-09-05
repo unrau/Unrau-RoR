@@ -68,9 +68,12 @@ a, a:link {
   transition-duration: 0.1s;
   transition-timing-function: ease-out;
   color: $col-pink-hot;
-  &:hover {
-    color: $col-blue-dark;
-  }
+}
+a:hover {
+  color: $col-blue-dark;
+}
+a:focus {
+  outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
