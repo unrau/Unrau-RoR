@@ -30,14 +30,15 @@ a.button,
 input.button {
   font-size: 1.7rem;
   font-weight: normal;
-  color: $col-pink-hot !important;
+  color: $col-blue-light !important;
   background-color: $col-blue-dark !important;
-  border-color: $col-pink-hot !important;
+  border-color: $col-blue-light !important;
+  margin: 0 10px 10px 0;
 
   &:hover {
-    color: $col-offwhite !important;
+    color: $col-offblack !important;
     background-color: $col-blue-light !important;
-    border-color: $col-blue-dark;
+    border-color: $col-blue-dark !important;
   }
 }
 
