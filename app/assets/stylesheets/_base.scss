@@ -46,14 +46,13 @@ input.button {
   @include square-button;
   font-size: 1.4rem;
   font-weight: normal;
-  box-shadow: 2px 3px 2px rgba(black, 0.3);
-  text-shadow: 1px 1px 1px rgba(black, 0.5);
+  box-shadow: 1px 2px 2px rgba(black, 0.5);
+  text-shadow: 1px 1px 1px rgba(black, 0.6);
   &:hover {
-    text-shadow: 1px 1px 1px rgba(black, 0.8);
-    text-shadow: 0px 0px 4px rgba($col-pink-hot, 0.8);
+    text-shadow: 1px 1px 1px rgba(black, 0.8), 0px 0px 4px rgba($col-pink-hot, 0.8);
   }
   &:active {
-    box-shadow: 1px 1px 1px rgba(black, 0.3);
+    box-shadow: 0px 0px 1px rgba(black, 0.8);
   }
 }
 .button-red {

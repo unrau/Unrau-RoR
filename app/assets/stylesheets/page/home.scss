@@ -87,6 +87,9 @@ STYLES FOR HOME PAGE
 
     #email-button {
       margin-top: 40px;
+      a:hover {
+        text-shadow: none;
+      }
     }
   }
 
