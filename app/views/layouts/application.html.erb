@@ -10,78 +10,88 @@
   <body>
     <canvas id="confetti_canvas"></canvas>
 
-    <div id="main-wrapper">
+    <div class="parallax">
+      <div class="parallax__layer parallax__layer--back"></div>
+      <div class="parallax__layer parallax__layer--base">
 
-      <div id="header-wrapper">
-        <div id="header">
-          <h2>Tristen Unrau</h2>
-        </div>
-      </div>
+        <div id="main-wrapper">
 
-      <div id="menu-sticky">
-        <div id="menu-wrapper" class="menu">
-          <div id="menu">
-            <ul>
-              <li><%= link_to 'Home', root_path %></li>
-              <li><a href="https://twitter.com/starbuckbeak"><%= icon('twitter') %></a></li>
-              <li><a href="http://ca.linkedin.com/in/tristenunrau"><%= icon('linkedin') %></a></li>
-              <li><a href="https://github.com/unrau/"><%= icon('github') %></a></li>
-              <li><a href="https://cartrdge.com/starbuckbeak"><%= icon('gamepad') %></a></li>
-            </ul>
+          <div id="header-wrapper">
+            <div id="header">
+              <h2>Tristen Unrau</h2>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div id="content-wrapper">
-        <div id="content">
-          <%= render 'shared/flash_messages' %>
-          <%= yield %>
-        </div>
-      </div>
-
-      <div id="footer-wrapper">
-        <div id="footer">
-
-          <h6>Copyright &copy;<%= Date.current.year %> Tristen Unrau</h6>
-
-          <div id="admin-menu-wrapper">
-            <div id="admin-menu">
-              <% if logged_in? %>
+          <div id="menu-sticky">
+            <div id="menu-wrapper" class="menu">
+              <div id="menu">
                 <ul>
-                  <li>
-                    <%= link_to current_user, class: 'button-square button-black' do %>
-                      <%= icon('user') %> <%= current_user.name %>
-                    <% end %>
-                  </li>
-                  <% if admin_user?(current_user) %>
+                  <li><%= link_to 'Home', root_path %></li>
+                  <li><a href="https://twitter.com/starbuckbeak"><%= icon('twitter') %></a></li>
+                  <li><a href="http://ca.linkedin.com/in/tristenunrau"><%= icon('linkedin') %></a></li>
+                  <li><a href="https://github.com/unrau/"><%= icon('github') %></a></li>
+                  <li><a href="https://cartrdge.com/starbuckbeak"><%= icon('gamepad') %></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div id="content-wrapper">
+            <div id="content">
+              <%= render 'shared/flash_messages' %>
+              <%= yield %>
+            </div>
+          </div>
+
+          <div id="footer-wrapper">
+            <div id="footer">
+
+              <h6>Copyright &copy;<%= Date.current.year %> Tristen Unrau</h6>
+
+              <div id="admin-menu-wrapper">
+                <div id="admin-menu">
+                  <% if logged_in? %>
+                  <ul>
                     <li>
-                      <%= link_to new_article_path, class: 'button-square button-black' do %>
-                        <%= icon('plus') %> New Post
+                      <%= link_to current_user, class: 'button-square button-black' do %>
+                      <%= icon('user') %> <%= current_user.name %>
                       <% end %>
                     </li>
-                  <% end %>
-                  <li>
-                    <%= link_to users_path, class: 'button-square button-black' do %>
+                    <% if admin_user?(current_user) %>
+                    <li>
+                      <%= link_to new_article_path, class: 'button-square button-black' do %>
+                      <%= icon('plus') %> New Post
+                      <% end %>
+                    </li>
+                    <% end %>
+                    <li>
+                      <%= link_to users_path, class: 'button-square button-black' do %>
                       <%= icon('group') %> Users
-                    <% end %>
-                  </li>
-                  <li>
-                    <%= link_to logout_path, class: 'button-square button-black' do %>
+                      <% end %>
+                    </li>
+                    <li>
+                      <%= link_to logout_path, class: 'button-square button-black' do %>
                       <%= icon('sign-out') %> Sign Out
-                    <% end %>
-                  </li>
-                </ul>
-              <% else %>
-                <%= link_to login_path, class: 'button-square button-black'  do %>
+                      <% end %>
+                    </li>
+                  </ul>
+                  <% else %>
+                  <%= link_to login_path, class: 'button-square button-black'  do %>
                   <%= icon('sign-in') %> Sign In
-                <% end %>
-              <% end %>
+                  <% end %>
+                  <% end %>
+                </div>
+              </div>
+
             </div>
           </div>
 
         </div>
-      </div>
+      </body>
+      </html>
 
+      </div>
     </div>
+
   </body>
 </html>

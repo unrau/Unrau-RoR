@@ -6,11 +6,16 @@ HEADER, MENU, & FOOTER STYLES
 */
 
 
+#header-wrapper {
+  @include full-width;
+  background-color: $col-offblack;
+}
 #header {
-  margin-top: 20px;
+  padding: 20px 0;
   text-align: center;
   color: $col-offwhite;
   text-shadow: 2px 2px 5px #f62a2a;
+  @include no-soggy-bottom-titles
 }
 
 
@@ -54,7 +59,6 @@ HEADER, MENU, & FOOTER STYLES
 
 
 #content-wrapper {
-  background-color: $col-offwhite;
   @include full-width;
 }
 #content {
