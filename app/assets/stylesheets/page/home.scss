@@ -51,7 +51,7 @@ STYLES FOR HOME PAGE
     max-width: 70%;
     height: auto;
     border: 3px solid $col-red;
-    margin: 0 40px 10px 40px;
+    margin: 0 40px 30px 40px;
     vertical-align: top;
     box-shadow: 0px 0px 40px rgba(white, 0.1);
     @include global-transition;
@@ -84,6 +84,10 @@ STYLES FOR HOME PAGE
     a:hover {
       color: $col-pink-hot;
     }
+
+    #email-button {
+      margin-top: 40px;
+    }
   }
 
   a.button-red:hover {
@@ -96,7 +100,18 @@ STYLES FOR HOME PAGE
   padding: 40px 0 0 0;
 
   .section-title {
-    margin-bottom: 29px;
+    margin-bottom: 30px;
+  }
+}
+
+
+#websites {
+  .section-title {
+    margin-bottom: 15px;
+  }
+  td {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
