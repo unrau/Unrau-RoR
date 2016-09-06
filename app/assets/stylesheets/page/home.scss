@@ -5,6 +5,9 @@ STYLES FOR HOME PAGE
 --------------------
 */
 
+.home-section-wrapper {
+  @include full-width;
+}
 
 .home-section {
   padding: 25px 0;
@@ -20,25 +23,12 @@ STYLES FOR HOME PAGE
 }
 
 
-#white-sections {
-  @include full-width;
-  background-color: $col-offwhite;
-}
-
-#weblog {
-  @include full-width;
-  background-color: $col-offwhite;
-  padding-bottom: 25px;
-}
-
-
 #introduction-wrapper {
-  background-color: rgba(black, 0);
   margin-top: -40px;
-  //background-image: url('/images/intro-bg-blur.png');
-  //background-size: cover;
-  //background-position: bottom;
-  //background-color: $col-blue-dark;
+  background-image: url('/images/intro-bg-blur.png');
+  background-size: cover;
+  background-position: bottom;
+  background-color: $col-blue-dark;
   color: $col-offwhite;
   @include hairline-border('bottom', rgba(black, 0.5));
   @include hairline-border('top', rgba(black, 0.5));
@@ -119,9 +109,6 @@ STYLES FOR HOME PAGE
   .section-title {
     margin-bottom: 15px;
   }
-  table {
-    margin-bottom: 0;
-  }
   td {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -130,7 +117,6 @@ STYLES FOR HOME PAGE
 
 
 #blog-home-wrapper {
-  @include full-width;
   margin-bottom: -80px;
   background-color: $col-blue-light;
   @include hairline-border('top', rgba($col-offblack, 0.3));

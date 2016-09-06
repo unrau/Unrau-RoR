@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-  background-color: $col-offblack;
+  background-color: #1b1818;
   color: $col-offblack;
   font-family: 'Source Sans Pro', serif;
 }
@@ -218,35 +218,4 @@ canvas#confetti_canvas.visible {
 }
 #confetti_button{
   cursor: pointer;
-}
-
-.parallax {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 1px;
-  perspective: 1px;
-  perspective-origin-x: 100%;
-}
-
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform-origin-x: 100%;
-}
-
-.parallax__layer--base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-.parallax__layer--back {
-  -webkit-transform: translateZ(-1px) scale(2.1);
-  transform: translateZ(-1px) scale(2.1);
-  background-image: url('/images/intro-bg-blur.png');
-  background-size: cover;
-  background-color: $col-blue-dark;
 }
