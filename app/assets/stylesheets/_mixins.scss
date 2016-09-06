@@ -36,6 +36,18 @@ MIXINS
   transform: perspective(1px) translateY(-50%);
 }
 
+@mixin global-transition {
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+
+@mixin slow-transition {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
 @mixin hairline-border($position, $colour) {
   @if $position == 'top' {
     border-top: 1px solid $colour;

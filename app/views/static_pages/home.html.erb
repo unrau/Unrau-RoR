@@ -11,7 +11,7 @@ HOME PAGE
     <div class="home-section" id="introduction">
       <%= image_tag "tristen.png", id: 'tristen' %>
       <div id="blurb">
-        <h6>
+        <h6 class="highlight">
           I write the words that manifest realms...<br />
           I send photons of my devising into your eyeballs...<br />
         </h6>
@@ -28,7 +28,7 @@ HOME PAGE
   <%# STUFF %>
   <div class="home-section-wrapper" id="stuff-wrapper">
     <div class="home-section button-row" id="stuff">
-      <h5>Stuff I Made</h5>
+      <h5 class="section-title">Stuff I Made</h5>
       <ul>
         <li><a class="button-square button-red" id="confetti_button"><%= icon('star') %> This Website</a></li>
         <li><a href="http://extreme-stopwatch.appstor.io/" class="button-square button-red"><%= icon('apple') %> Extreme Stopwatch</a></li>
@@ -44,7 +44,7 @@ HOME PAGE
   <%# WEBSITES %>
   <div class="home-section-wrapper" id="websites-wrapper">
     <div class="home-section last-home-section" id="websites">
-      <h5>My Other Websites</h5>
+      <h5 class="section-title">My Other Websites</h5>
       <table>
         <tbody>
           <tr>
@@ -72,7 +72,7 @@ HOME PAGE
   <%# BLOG %>
   <div class="home-section-wrapper" id="blog-home-wrapper">
     <div class="home-section" id="blog-home">
-      <h5>Blog</h5>
+      <h5 class="section-title">Blog</h5>
       <div id="homepageposts">
         <%= render partial: 'posts' %>
       </div>
