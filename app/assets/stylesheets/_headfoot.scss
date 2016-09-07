@@ -9,8 +9,16 @@ HEADER, MENU, & FOOTER STYLES
 #header {
   margin-top: 20px;
   text-align: center;
+}
+
+a#header-title-link {
   color: $col-offwhite;
-  text-shadow: 2px 2px 5px #f62a2a;
+  text-shadow: 2px 2px 5px $col-red;
+  @include global-transition;
+  &:hover {
+    color: $col-blue-pearl;
+    text-shadow: 2px 2px 10px $col-blue-light, 2px 2px 2px black;
+  }
 }
 
 
