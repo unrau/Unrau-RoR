@@ -28,7 +28,7 @@ $(document).on('turbolinks:load', function() {
     [248, 182, 70]
   ],
   PI_2 = 2 * Math.PI,
-  DURATION = 3000; // 1 second
+  DURATION = 2000; // 1000 = 1 second
 
   var canvas = $('#confetti_canvas')[0];
   var context = canvas.getContext('2d');
