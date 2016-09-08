@@ -18,7 +18,7 @@
 // CONFETTI EFFECT
 // Original confetti script by Linmiao Xu: https://codepen.io/linrock/pen/Amdhr
 // Thoroughly edited for this website by Michael Fruen
-$(function() {
+$(document).on('turbolinks:load', function() {
   var NUM_CONFETTI = 350,
   COLORS = [
     [85, 71, 106],
