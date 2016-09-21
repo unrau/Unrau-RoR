@@ -52,10 +52,14 @@ a#header-title-link {
     font-family: 'Exo 2', serif;
     font-weight: bold;
     font-size: 2rem;
-    padding: 20px 10px;
+    padding: 20px 14px;
 
     &:hover {
       color: $col-blue-dark;
+    }
+
+    i.fa {
+      margin: 0;
     }
   }
 }
