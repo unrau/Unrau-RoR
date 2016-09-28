@@ -30,7 +30,6 @@ HOME PAGE
     <div class="home-section button-row" id="stuff">
       <h5 class="section-title">Pages</h5>
       <ul>
-        <li><a class="button-square button-red" id="confetti_button"><%= icon('star') %> This Website</a></li>
         <li><a href="/wallpapers" class="button-square button-red"><%= icon('desktop') %> Desktop Wallpapers</a></li>
         <li><a href="/fiasco" class="button-square button-red"><%= icon('newspaper-o') %> Fiasco Playsets</a></li>
       </ul>
@@ -97,6 +96,10 @@ HOME PAGE
               The landing page for my music persona.
             </td>
           </tr>
+          <tr>
+            <td><a class="button-square button-red" id="confetti_button" onclick="easterEgg()"><%= icon('star') %> This Website</a></td>
+            <td><span id="easter-egg">Click the button. You know you want to!</span></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -114,3 +117,30 @@ HOME PAGE
   </div>
 
 </div>
+
+<script>
+  // Enable the Easter Egg text to change to a random message that's different than the last one
+  function easterEgg() {
+    var oldText = $('#easter-egg').prop('innerHTML');
+    var newText = oldText;
+    function randomEgg() {
+      var eggs = ["Good doggy!",
+                  "WHEEEEEEEEEEEEEEE!!!",
+                  "Surprise!",
+                  "Do you do everything you're told to do?",
+                  "Witness me!",
+                  "Confetti falls from the ceiling. Make a bluff check to avoid appearing delighted."];
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+      var newRandom = getRandomInt(0, eggs.length);
+      return eggs[newRandom];
+    }
+    while (newText == oldText) {
+      newText = randomEgg();
+    }
+    $('#easter-egg').text(newText);
+  }
+</script>
