@@ -66,16 +66,11 @@ MIXINS
   }
 }
 
-@mixin square-button {
-  font-family: 'Exo 2', sans-serif;
-  padding: 10px 20px;
+@mixin button-border {
   border-top: 4px solid rgba(0,0,0,0.1);
   border-left: 4px solid rgba(0,0,0,0.5);
   border-bottom: 1px solid rgba(0,0,0,0.1);
   border-right: 1px solid rgba(0,0,0,0.1);
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0;
 }
 
 @mixin linear-gradient-v($top, $bottom){

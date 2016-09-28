@@ -87,14 +87,11 @@ STYLES FOR HOME PAGE
 
     #email-button {
       margin-top: 40px;
-      a:hover {
+      button:hover {
         text-shadow: none;
+        background-color: $col-offwhite !important;
       }
     }
-  }
-
-  a.button-red:hover {
-    background-color: $col-offwhite !important;
   }
 }
 

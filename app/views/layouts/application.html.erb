@@ -75,31 +75,31 @@
               <% if logged_in? %>
                 <ul>
                   <li>
-                    <%= link_to current_user, class: 'button-square button-black' do %>
-                      <%= icon('user') %> <%= current_user.name %>
+                    <%= link_to current_user do %>
+                      <button class="black-button"><%= icon('user') %> <%= current_user.name %></button>
                     <% end %>
                   </li>
                   <% if admin_user?(current_user) %>
                     <li>
-                      <%= link_to new_article_path, class: 'button-square button-black' do %>
-                        <%= icon('plus') %> New Post
+                      <%= link_to new_article_path do %>
+                        <button class="black-button"><%= icon('plus') %> New Post</button>
                       <% end %>
                     </li>
                   <% end %>
                   <li>
-                    <%= link_to users_path, class: 'button-square button-black' do %>
-                      <%= icon('group') %> Users
+                    <%= link_to users_path do %>
+                      <button class="black-button"><%= icon('group') %> Users</button>
                     <% end %>
                   </li>
                   <li>
-                    <%= link_to logout_path, class: 'button-square button-black' do %>
-                      <%= icon('sign-out') %> Sign Out
+                    <%= link_to logout_path do %>
+                      <button class="black-button"><%= icon('sign-out') %> Sign Out</button>
                     <% end %>
                   </li>
                 </ul>
               <% else %>
-                <%= link_to login_path, class: 'button-square button-black'  do %>
-                  <%= icon('sign-in') %> Sign In
+                <%= link_to login_path do %>
+                  <button class="black-button"><%= icon('sign-in') %> Sign In</button>
                 <% end %>
               <% end %>
             </div>

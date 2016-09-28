@@ -42,41 +42,58 @@ input.button {
   }
 }
 
-.button-square {
-  @include square-button;
+button,
+input.button,
+a.button {
+  @include button-border;
+  font-family: 'Exo 2', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  white-space: pre-wrap;
+  height: auto;
+  margin: 0;
+  padding: 10px 20px;
   font-size: 1.4rem;
+  line-height: 2rem;
   font-weight: normal;
   box-shadow: 1px 2px 2px rgba(black, 0.5);
-  text-shadow: 1px 1px 1px rgba(black, 0.6);
   &:hover {
-    text-shadow: 1px 1px 1px rgba(black, 0.8), 0px 0px 4px rgba($col-pink-hot, 0.8);
+    @include button-border;
+    box-shadow: 1px 2px 2px rgba(black, 0.6);
   }
   &:active {
+    @include button-border;
     box-shadow: 0px 0px 1px rgba(black, 0.8);
   }
+  &:focus {
+    @include button-border;
+  }
 }
-.button-red {
-  background-color: $col-pink-hot !important;
-  color: white !important;
+
+button.red-button {
+  background-color: $col-pink-hot;
+  color: white;
   &:hover {
-    background-color: $col-blue-dark !important;
-    color: $col-pink-hot !important;
+    background-color: $col-blue-dark;
+    color: $col-pink-hot;
+    text-shadow: 0px 0px 4px rgba($col-pink-hot, 0.8);
   }
   &:active {
-    background-color: $col-offblack !important;
+    background-color: $col-offblack;
   }
 }
-.button-black {
-  background-color: $col-offblack !important;
-  color: $col-faded-black !important;
+
+button.black-button {
+  background-color: $col-offblack;
+  color: $col-faded-black;
   &:hover {
-    color: $col-red !important;
-    background-color: rgba(black, 0.2) !important;
-    text-shadow: 1px 1px 1px rgba(black, 0.8);
+    color: $col-red;
+    background-color: rgba(black, 0.2);
     text-shadow: 0px 0px 4px rgba($col-pink-hot, 0.4);
   }
   &:active {
-    background-color: rgba(black, 0.4) !important;
+    background-color: rgba(black, 0.4);
   }
 }
 

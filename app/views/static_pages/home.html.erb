@@ -20,7 +20,7 @@ HOME PAGE
           <span class="doer">Hobby:</span> Fiction Writer, Game Developer, Comedy Folk Singer / Song Writer —<br />
           <span class="doer">Self-Proclaimed:</span> Chocolate Milk Connoisseur —
         </p>
-        <p id="email-button"><a href="mailto:tristen@unrau.me" class="button-square button-red"><%= icon('envelope') %> Email Me</a></p>
+        <p id="email-button"><a href="mailto:tristen@unrau.me"><button class="red-button"><%= icon('envelope') %> Email Me</button></a></p>
       </div>
     </div>
   </div>
@@ -30,8 +30,8 @@ HOME PAGE
     <div class="home-section button-row" id="stuff">
       <h5 class="section-title">Pages</h5>
       <ul>
-        <li><a href="/wallpapers" class="button-square button-red"><%= icon('desktop') %> Desktop Wallpapers</a></li>
-        <li><a href="/fiasco" class="button-square button-red"><%= icon('newspaper-o') %> Fiasco Playsets</a></li>
+        <li><a href="/wallpapers"><button class="red-button"><%= icon('desktop') %> Desktop Wallpapers</button></a></li>
+        <li><a href="/fiasco"><button class="red-button"><%= icon('newspaper-o') %> Fiasco Playsets</button></a></li>
       </ul>
     </div>
   </div>
@@ -43,8 +43,12 @@ HOME PAGE
       <table>
         <tbody>
           <tr>
-            <td><a href="http://www.hownowbrowncow.ca/chocolate-milk-ipsum" class="button-square button-red" target="_blank"><%= icon('file-code-o') %> Chocolate Milk Ipsum</a></td>
-            <td>A Chocolate Milk themed <a href="http://www.lipsum.com/" target="_blank">Lorem Ipsum</a>-style "dummy text" generator.</td>
+            <td>
+              <a href="http://www.hownowbrowncow.ca/chocolate-milk-ipsum" target="_blank"><button class="red-button"><%= icon('file-code-o') %> Chocolate Milk Ipsum</button></a>
+            </td>
+            <td>
+              A Chocolate Milk themed <a href="http://www.lipsum.com/" target="_blank">Lorem Ipsum</a>-style "dummy text" generator.
+            </td>
           </tr>
         </tbody>
       </table>
@@ -58,16 +62,28 @@ HOME PAGE
       <table>
         <tbody>
           <tr>
-            <td><a href="http://extreme-stopwatch.appstor.io/" class="button-square button-red" target="_blank"><%= icon('apple') %> Extreme Stopwatch</a></td>
-            <td>Simple stopwatch game for iOS with scorestreaks and achievements. Currently unavailable until I renew my Apple Developer Account.</td>
+            <td>
+              <a href="http://extreme-stopwatch.appstor.io/" target="_blank"><button class="red-button"><%= icon('apple') %> Extreme Stopwatch</button></a>
+            </td>
+            <td>
+              Simple stopwatch game for iOS with scorestreaks and achievements. Currently unavailable until I renew my Apple Developer Account.
+            </td>
           </tr>
           <tr>
-            <td><a href="http://tristen.unrau.me/rescape/" class="button-square button-red" target="_blank"><%= icon('gamepad') %> Pocket Universe: Rescape</a></td>
-            <td>An <a href="https://en.wikipedia.org/wiki/Asteroids_(video_game)" target="_blank">Asteroids</a> clone with a trans-dimentional twist!</td>
+            <td>
+              <a href="http://tristen.unrau.me/rescape/" target="_blank"><button class="red-button"><%= icon('gamepad') %> Pocket Universe: Rescape</button></a>
+            </td>
+            <td>
+              An <a href="https://en.wikipedia.org/wiki/Asteroids_(video_game)" target="_blank">Asteroids</a> clone with a trans-dimentional twist!
+            </td>
           </tr>
           <tr>
-            <td><a href="http://tristen.unrau.me/pong/" class="button-square button-red" target="_blank"><%= icon('gamepad') %> Digital Ping Pong</a></td>
-            <td>A <a href="https://en.wikipedia.org/wiki/Pong" target="_blank">Pong</a> clone with 2-Player and A.I. Opponent modes.</td>
+            <td>
+              <a href="http://tristen.unrau.me/pong/" target="_blank"><button class="red-button"><%= icon('gamepad') %> Digital Ping Pong</button></a>
+            </td>
+            <td>
+              A <a href="https://en.wikipedia.org/wiki/Pong" target="_blank">Pong</a> clone with 2-Player and A.I. Opponent modes.
+            </td>
           </tr>
         </tbody>
       </table>
@@ -82,7 +98,7 @@ HOME PAGE
         <tbody>
           <tr>
             <td>
-              <a href="http://hownowbrowncow.ca" target="_blank" class="button-square button-red"><%= icon('external-link') %> How Now Brown Cow</a>
+              <a href="http://hownowbrowncow.ca" target="_blank"><button class="red-button"><%= icon('external-link') %> How Now Brown Cow</button></a>
             </td>
             <td>
               Where I review chocolate milk!
@@ -90,23 +106,27 @@ HOME PAGE
           </tr>
           <tr>
             <td>
-              <a href="http://daxripley.com" target="_blank" class="button-square button-red"><%= icon('external-link') %> Dax Ripley</a>
+              <a href="http://daxripley.com" target="_blank"><button class="red-button"><%= icon('external-link') %> Dax Ripley</button></a>
             </td>
             <td>
               The landing page for my music persona.
             </td>
           </tr>
           <tr>
-            <td><a class="button-square button-red" id="confetti_button" onclick="easterEgg()"><%= icon('star') %> This Website</a></td>
-            <td><span id="easter-egg">Click the button. You know you want to!</span></td>
+            <td>
+              <a id="confetti_button" onclick="easterEgg()"><button class="red-button"><%= icon('star') %> This Website</button></a>
+            </td>
+            <td>
+              <span id="easter-egg">Click the button. You know you want to!</span>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <div name="weblog" id="weblog"></div>
   <%# BLOG %>
+  <div name="weblog" id="weblog"></div>
   <div class="home-section-wrapper" id="blog-home-wrapper">
     <div class="home-section" id="blog-home">
       <h5 class="section-title">Blog</h5>
@@ -135,8 +155,7 @@ HOME PAGE
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min)) + min;
       }
-      var newRandom = getRandomInt(0, eggs.length);
-      return eggs[newRandom];
+      return eggs[getRandomInt(0, eggs.length)];
     }
     while (newText == oldText) {
       newText = randomEgg();
