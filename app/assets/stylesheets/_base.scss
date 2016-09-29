@@ -26,26 +26,24 @@ body {
   font-family: 'Source Sans Pro', serif;
 }
 
-a.button,
-input.button {
-  font-size: 1.7rem;
-  font-weight: normal;
-  color: $col-blue-light !important;
-  background-color: $col-blue-dark !important;
-  border-color: $col-blue-light !important;
-  margin: 0 10px 10px 0;
-
-  &:hover {
-    color: $col-offblack !important;
-    background-color: $col-blue-light !important;
-    border-color: $col-blue-dark !important;
-  }
+a, a:link {
+  text-decoration: none;
+  color: $col-pink-hot;
+  @include global-transition;
+}
+a:hover {
+  color: $col-blue-dark;
+}
+a:focus {
+  outline: none;
 }
 
 button,
 input.button,
 a.button {
   @include button-border;
+  color: $col-blue-bright;
+  background-color: $col-blue-dark;
   font-family: 'Exo 2', sans-serif;
   text-transform: uppercase;
   text-decoration: none;
@@ -60,6 +58,8 @@ a.button {
   box-shadow: 1px 2px 2px rgba(black, 0.5);
   &:hover {
     @include button-border;
+    color: $col-blue-darker;
+    background-color: $col-blue-light;
     box-shadow: 1px 2px 2px rgba(black, 0.6);
   }
   &:active {
@@ -97,18 +97,6 @@ a.button {
   }
 }
 
-a, a:link {
-  text-decoration: none;
-  color: $col-pink-hot;
-  @include global-transition;
-}
-a:hover {
-  color: $col-blue-dark;
-}
-a:focus {
-  outline: none;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Exo 2', serif;
   text-transform: uppercase;
@@ -118,7 +106,8 @@ label {
   text-transform: uppercase;
   color: $col-blue;
 }
-input.field {
+input.field,
+textarea.field {
   @include placeholder-colour($col-blue);
   border-radius: 0;
   border-top: 3px solid $col-blue-light;
