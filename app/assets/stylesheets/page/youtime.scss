@@ -1,0 +1,51 @@
+
+/*
+----------------------
+STYLES FOR YOUTIME APP
+----------------------
+*/
+
+
+#content-youtime {
+
+  #youtime-form {
+    margin-top: 30px;
+  }
+
+  .youtime-field {
+    display: inline-block;
+    margin-right: 20px;
+
+    input {
+      width: 80px;
+    }
+  }
+
+  .control-row {
+    margin-top: 20px;
+
+    input.button {
+      color: $col-offwhite !important;
+    }
+  }
+
+  #youtime-url {
+    margin-top: 30px;
+    background-color: $col-blue;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px 30px;
+  }
+
+  span#copy-button {
+    cursor: pointer;
+    white-space: nowrap;
+    color: $col-blue-bright;
+    margin-left: 30px;
+    &:hover {
+      color: $col-offwhite;
+    }
+  }
+
+}

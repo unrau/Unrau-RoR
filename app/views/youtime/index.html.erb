@@ -1,0 +1,69 @@
+<% title 'YouTime', true %>
+<%#
+------------
+YouTime Page
+------------
+%>
+
+
+<div id="content-youtime">
+
+  <div class="row">
+    <div class="two columns">&nbsp;</div>
+    <div class="eight columns">
+      <h5><%= icon('code') %> YouTime</h5>
+      <h6>Create YouTube links that start at a set time</h6>
+    </div>
+  </div>
+
+  <div id="youtime-form">
+    <%= form_for :youtime_generator do |form| %>
+
+      <div class="row">
+        <div class="two columns">&nbsp;</div>
+        <div class="eight columns">
+          <%= form.label :youtube_id, "Youtube Video ID" %>
+          <%= form.text_field :youtube_id, class: 'u-full-width field', value: @default_options[0], placeholder: "The part of the YouTube URL after 'watch?v='" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="two columns">&nbsp;</div>
+        <div class="eight columns">
+          <div class="youtime-field">
+            <%= form.label :hour, "Hour" %>
+            <%= form.number_field :hour, class: 'field', in: 0..10, step: 1, value: @default_options[1] %>
+          </div>
+          <div class="youtime-field">
+            <%= form.label :minute, "Minute" %>
+            <%= form.number_field :minute, class: 'field', in: 0..59, step: 1, value: @default_options[2] %>
+          </div>
+          <div class="youtime-field">
+            <%= form.label :second, "Second" %>
+            <%= form.number_field :second, class: 'field', in: 0..59, step: 1, value: @default_options[3] %>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row control-row">
+        <div class="two columns">&nbsp;</div>
+        <div class="eight columns">
+          <%= form.submit 'Generate', class: 'button' %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="two columns">&nbsp;</div>
+    <div class="eight columns">
+      <div id="youtime-url">
+        <%= @youtime.html_safe %>
+        <% if @youtime != "Fill in the fields and click 'GENERATE'." %><a href="<%= @youtime %>" target="_blank"><span id="copy-button"><%= icon('external-link') %> link</span></a><% end %>
+      </div>
+    </div>
+  </div>
+
+</div>

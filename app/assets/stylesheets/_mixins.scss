@@ -28,6 +28,24 @@ MIXINS
   }
 }
 
+@mixin placeholder-colour($colour) {
+  &::-webkit-input-placeholder {
+    color: $colour;
+  }
+  &::-moz-placeholder {
+    color: $colour;
+  }
+  &:-ms-input-placeholder {
+    color: $colour;
+  }
+  &:-moz-placeholder {
+    color: $colour;
+  }
+  &:placeholder {
+    color: $colour;
+  }
+}
+
 @mixin vertical-center($position: relative) {
   position: $position;
   top: 50%;
