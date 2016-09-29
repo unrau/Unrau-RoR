@@ -1,7 +1,7 @@
 class YoutimeController < ApplicationController
 
   def index
-    @youtime = "Fill in the fields and click 'GENERATE'."
+    @youtime = ''
     @default_options = ['', 0, 0, 0]
     if session[:new_youtime]
       @youtime = generate_youtime(session[:new_youtime][0],

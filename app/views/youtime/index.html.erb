@@ -56,14 +56,16 @@ YouTime Page
     <% end %>
   </div>
 
-  <div class="row">
-    <div class="two columns">&nbsp;</div>
-    <div class="eight columns">
-      <div id="youtime-url">
-        <%= @youtime.html_safe %>
-        <% if @youtime != "Fill in the fields and click 'GENERATE'." %><a href="<%= @youtime %>" target="_blank"><span id="copy-button"><%= icon('external-link') %> link</span></a><% end %>
+  <% if @default_options[0] != '' %>
+    <div class="row">
+      <div class="two columns">&nbsp;</div>
+      <div class="eight columns">
+        <div id="youtime-url">
+          <%= @youtime.html_safe %>
+          <a href="<%= @youtime %>" target="_blank"><span id="copy-button"><%= icon('external-link') %> link</span></a>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 
 </div>
