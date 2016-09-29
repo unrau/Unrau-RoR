@@ -31,7 +31,7 @@ a#header-title-link {
 #menu-wrapper {
   padding: 20px 0;
   background-color: $col-pink-hot;
-  box-shadow: 0px -15px 10px rgba(black, 0.3), 0px 10px 20px rgba(black, 0.2);
+  box-shadow: 0px 10px 20px rgba(black, 0.1);
   @include full-width;
   @include hairline-border('bottom', rgba($col-offwhite, 0.2));
 }
