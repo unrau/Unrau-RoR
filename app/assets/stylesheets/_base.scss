@@ -71,7 +71,7 @@ a.button {
   }
 }
 
-button.red-button {
+.red-button {
   background-color: $col-pink-hot;
   color: white;
   &:hover {
@@ -84,7 +84,7 @@ button.red-button {
   }
 }
 
-button.black-button {
+.black-button {
   background-color: $col-offblack;
   color: $col-faded-black;
   &:hover {
@@ -112,6 +112,27 @@ a:focus {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Exo 2', serif;
   text-transform: uppercase;
+}
+
+label {
+  text-transform: uppercase;
+  color: $col-blue;
+}
+input.field {
+  @include placeholder-colour($col-blue);
+  border-radius: 0;
+  border-top: 3px solid $col-blue-light;
+  border-right: 1px solid $col-blue-light;
+  border-bottom: 1px solid $col-blue-light;
+  border-left: 3px solid $col-blue;
+  background-color: $col-blue-bright;
+  color: $col-blue-darker;
+  &:hover, &:active, &:focus {
+    border-top: 3px solid $col-blue-bright;
+    border-right: 1px solid $col-blue-bright;
+    border-bottom: 1px solid $col-blue-bright;
+    border-left: 3px solid $col-blue-light;
+  }
 }
 
 blockquote {
